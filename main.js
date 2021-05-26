@@ -17,7 +17,7 @@ function flipCard() {
     return;
   }
   secondCard = this;
-  hasFlippedCard = false;
+  //   hasFlippedCard = false;
 }
 
 function checkForMatch() {
@@ -43,14 +43,17 @@ function unflipCards() {
     lockMemoryGame = false;
   }, 1500);
 }
-function shuffle() {
+
+// Immediately Invoked Function Expression (IIFE) -> function will execute itself right after its declaration
+(function shuffle() {
   cards.forEach((card) => {
     //   Math.floor -> rounds a number downwards to the nearest integer
     // Looping through the cards -> generates a random number 0-12 -> assigns it to flex-item:order
-    let ramdom = Math.floor(Math.random() * 12);
-    card.style.order = ramdom;
+    // flex-items have their order property set to 0 by default
+    let ramdomPos = Math.floor(Math.random() * 12);
+    card.style.order = ramdomPos;
   });
-}
+})();
 // Looping through the cards and attaching event listener
 // when clicking on a card the flipCard function will be invoked
 // this. -> used for the clicked card
