@@ -21,13 +21,15 @@ function checkForMatch() {
     disableCards();
     return;
   }
+
   unflipCards();
 }
-//  When cards match event listeners are removed
+//  When cards match event listeners are removed -> to prevent flipping
 function disableCards() {
   firstCard.removeEventListener("click", flipCard);
   secondCard.removeEventListener("click", flipCard);
 }
+// To turn both cards back by removing "flip" class in 1500ms
 function unflipCards() {
   setTimeout(() => {
     firstCard.classList.remove("flip");
