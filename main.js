@@ -10,7 +10,29 @@ function flipCard() {
   if (!hasFlippedCard) {
     hasFlippedCard = true;
     firstCard = this;
+    return;
   }
+  secondCard = this;
+  hasFlippedCard = false;
+}
+
+function checkForMatch() {
+  if (firstCard.dataset.framework === secondCard.dataset.framework) {
+    disableCards();
+    return;
+  }
+  unflipCards();
+}
+//  When cards match event listeners are removed
+function disableCards() {
+  firstCard.removeEventListener("click", flipCard);
+  secondCard.removeEventListener("click", flipCard);
+}
+function unflipCards() {
+  setTimeout(() => {
+    firstCard.classList.remove("flip");
+    secondCard.classList.remove("flip");
+  }, 1500);
 }
 // Looping through the cards and attaching event listener
 // when clicking on a card the flipCard function will be invoked
