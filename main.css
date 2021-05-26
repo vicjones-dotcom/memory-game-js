@@ -29,6 +29,19 @@ body {
 .game-instructions__button:hover {
   cursor: pointer;
 }
+.game-instructions__paragraph {
+  border: 1px solid #407088;
+  border-radius: 10px;
+  padding: 20px auto;
+  font-family: Poppins;
+}
+.game-instructions__winning-message-container {
+  background-color: #407088;
+  border-radius: 10px;
+  padding: 50px 50px;
+  margin-top: 50px;
+  visibility: hidden;
+}
 
 .memory-game {
   width: 640px;
@@ -67,21 +80,6 @@ body {
 
 .front-face {
   transform: rotateY(180deg);
-}
-
-p {
-  border: 1px solid #407088;
-  border-radius: 10px;
-  padding: 20px auto;
-  font-family: Poppins;
-}
-
-.winning-message {
-  background-color: #407088;
-  border-radius: 10px;
-  padding: 50px 50px;
-  margin-top: 50px;
-  visibility: hidden;
 }
 
 /*# sourceMappingURL=main.css.map */
