@@ -58,4 +58,24 @@ h1 {
   font-family: Poppins;
 }
 
+button {
+  border-radius: 10px;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+  margin: 20px auto;
+  padding: 15px 20px;
+  font-size: 15px;
+  background-color: #7391ff;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+p {
+  border: 1px solid #407088;
+  border-radius: 10px;
+  padding: 20px auto;
+  font-family: Poppins;
+}
+
 /*# sourceMappingURL=main.css.map */
