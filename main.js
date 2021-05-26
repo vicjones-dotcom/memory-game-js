@@ -1,4 +1,6 @@
-const button = document.querySelector("button");
+const button = document.querySelector("#start-game-btn");
+// document.querySelector(".winning-message").classList.remove("hidden");
+// document.querySelector(".winning-message").classList.add("visible");
 button.addEventListener("click", () => {
   const cards = document.querySelectorAll(".memory-card");
   // Variables to ensure that when first card is clicked, it will wait until another one is flipped

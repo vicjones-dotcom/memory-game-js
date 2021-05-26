@@ -1,4 +1,20 @@
 @use "./base"as *;
+.game-instructions {
+  &__heading {
+    font-family: $primary-font;
+  }
+  &__button {
+    border-radius: 10px;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+    margin: 20px auto;
+    padding: 15px 20px;
+    font-size: 15px;
+    background-color: #7391ff;
+  }
+  &__button:hover {
+    cursor: pointer;
+  }
+}
 .memory-game {
   width: 640px;
   height: 640px;
@@ -41,23 +57,17 @@
 .front-face {
   transform: rotateY(180deg);
 }
-h1 {
-  font-family: $primary-font;
-}
-button {
-  border-radius: 10px;
-  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
-  margin: 20px auto;
-  padding: 15px 20px;
-  font-size: 15px;
-  background-color: #7391ff;
-}
-button:hover {
-  cursor: pointer;
-}
+
 p {
   border: 1px solid #407088;
   border-radius: 10px;
   padding: 20px auto;
   font-family: $primary-font;
+}
+.winning-message {
+  background-color: #407088;
+  border-radius: 10px;
+  padding: 50px 50px;
+  margin-top: 50px;
+  visibility: hidden;
 }
