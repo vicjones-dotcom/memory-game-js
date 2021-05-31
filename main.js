@@ -1,17 +1,20 @@
 const button = document.querySelector("#start-game-btn");
-// document.querySelector(".winning-message").classList.remove("hidden");
-// document.querySelector(".winning-message").classList.add("visible");
+
 button.addEventListener("click", () => {
-  const cards = document.querySelectorAll(".memory-card");
+  const cards = document.querySelectorAll("#memory-card");
   // Variables to ensure that when first card is clicked, it will wait until another one is flipped
+  let cardsArr = [cards];
+  console.log(cardsArr);
   let hasFlippedCard = false;
 
   let firstCard, secondCard;
   // Variable to avoid two sets of cards being turned at the same time
   let lockBoard = false;
 
+  let matchedCards = document.querySelectorAll(".matched");
+
   function flipCard() {
-    // If a second card is clicked, lockMemoryGame === false
+    // If a second card is clicked, lockBoard === false
     if (lockBoard) return;
     this.classList.add("flip");
     // When no card is flipped -> hasFlippedCard = true & firstCard is set to clicked
@@ -28,11 +31,16 @@ button.addEventListener("click", () => {
   function checkForMatch() {
     if (firstCard.dataset.framework === secondCard.dataset.framework) {
       disableCards();
+      matchedCards.classList.add("matched");
       return;
     }
 
     unflipCards();
   }
+  // if all cards are flipped:
+  // reset cards
+  // randomise them again
+
   //  When cards match event listeners are removed -> to prevent flipping
   function disableCards() {
     firstCard.removeEventListener("click", flipCard);
@@ -66,8 +74,19 @@ button.addEventListener("click", () => {
       card.style.order = ramdomPos;
     });
   })();
+
+  const winner = () => {
+    if (matchedCards.length === 12) {
+      document.querySelector(".winning-message").classList.remove("hidden");
+      document.querySelector(".winning-message").classList.add("visible");
+    }
+  };
+
   // Looping through the cards and attaching event listener
   // when clicking on a card the flipCard function will be invoked
   // this. -> used for the clicked card
   cards.forEach((card) => card.addEventListener("click", flipCard));
+  cards.forEach((card) => {
+    card.addEventListener("click", winner);
+  });
 });

@@ -36,37 +36,43 @@
   flex-wrap: wrap;
   //   perspective -> sets how far in the z plane the object is
   perspective: 1000px;
-}
-// width and height are calculated with calc() CSS function
-.memory-card {
-  width: calc(25% - 10px);
+  &__card {
+    // width and height are calculated with calc() CSS function
+    width: calc(25% - 10px);
 
-  height: calc(33.333% - 10px);
+    height: calc(33.333% - 10px);
 
-  margin: 5px;
-  position: relative;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-  transform: scale(1);
-  //   To position the card in the 3D space created for the parent
-  transform-style: preserve-3d;
-  //   Adding movement effect
-  transition: transform 0.5s;
-}
-
-.front-face,
-.back-face {
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  position: absolute;
-  border-radius: 5px;
-  background: #407088;
-  //   To reveal the image underneath it
-  backface-visibility: hidden;
-}
-.memory-card.flip {
-  transform: rotateY(180deg);
-}
-.front-face {
-  transform: rotateY(180deg);
+    margin: 5px;
+    position: relative;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    transform: scale(1);
+    //   To position the card in the 3D space created for the parent
+    transform-style: preserve-3d;
+    //   Adding movement effect
+    transition: transform 0.5s;
+  }
+  &__card.flip {
+    transform: rotateY(180deg);
+  }
+  &__front-face {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: #407088;
+    //   To reveal the image underneath it
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+  }
+  &__back-face {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: #407088;
+    //   To reveal the image underneath it
+    backface-visibility: hidden;
+  }
 }
