@@ -1,5 +1,7 @@
 const button = document.querySelector("#start-game-btn");
 
+const restartClick = document.querySelector("#winning-message");
+
 const cards = document.querySelectorAll("#memory-card");
 // Variables to ensure that when first card is clicked, it will wait until another one is flipped
 let cardsArr = [cards];
@@ -88,3 +90,4 @@ function winner() {
 // when clicking on a card the flipCard function will be invoked
 // this. -> used for the clicked card
 cards.forEach((card) => card.addEventListener("click", flipCard));
+restartClick.addEventListener("click", restartGame);

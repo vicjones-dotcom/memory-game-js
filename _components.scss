@@ -5,7 +5,7 @@
     text-align: center;
     margin: 20px auto;
     color: white;
-    font-size: 30px;
+    font-size: 50px;
   }
 
   &__button {
@@ -56,8 +56,7 @@
     height: 100%;
     padding: 20px;
     position: absolute;
-    border-radius: 5px;
-    background: #407088;
+    background: black;
     //   To reveal the image underneath it
     backface-visibility: hidden;
     transform: rotateY(180deg);
@@ -67,22 +66,25 @@
     height: 100%;
     padding: 20px;
     position: absolute;
-    border-radius: 5px;
-    background: #407088;
+    background-image: url(https://unsplash.com/photos/oMpAz-DN-9I);
+
     //   To reveal the image underneath it
     backface-visibility: hidden;
   }
   &__winning-message-container {
-    background-color: #407088;
-    border-radius: 10px;
+    background-color: #043035;
+    color: white;
     padding: 20px 20px;
     height: 25vh;
     width: 80%;
+    opacity: 0.8;
     visibility: hidden;
     position: absolute;
     margin: 100px 60px;
     z-index: 3;
-    animation: dangle 3s 3;
+    animation: dangle 3s infinite;
+    font-family: $primary-font;
+    font-size: 30px;
   }
   @keyframes dangle {
     0% {
