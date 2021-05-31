@@ -31,7 +31,8 @@ button.addEventListener("click", () => {
   function checkForMatch() {
     if (firstCard.dataset.framework === secondCard.dataset.framework) {
       disableCards();
-      matchedCards.classList.add("matched");
+
+      winner();
       return;
     }
 
@@ -43,6 +44,8 @@ button.addEventListener("click", () => {
 
   //  When cards match event listeners are removed -> to prevent flipping
   function disableCards() {
+    firstCard.classList.add("matched");
+    secondCard.classList.add("matched");
     firstCard.removeEventListener("click", flipCard);
     secondCard.removeEventListener("click", flipCard);
     resetBoard();
@@ -76,7 +79,7 @@ button.addEventListener("click", () => {
   })();
 
   const winner = () => {
-    if (matchedCards.length === 12) {
+    if (document.querySelectorAll(".matched").length === 12) {
       document.querySelector(".winning-message").classList.remove("hidden");
       document.querySelector(".winning-message").classList.add("visible");
     }
@@ -86,7 +89,4 @@ button.addEventListener("click", () => {
   // when clicking on a card the flipCard function will be invoked
   // this. -> used for the clicked card
   cards.forEach((card) => card.addEventListener("click", flipCard));
-  cards.forEach((card) => {
-    card.addEventListener("click", winner);
-  });
 });
