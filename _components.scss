@@ -27,6 +27,9 @@
     margin-top: 50px;
     visibility: hidden;
   }
+  &__win-message {
+    visibility: hidden;
+  }
 }
 .memory-game {
   width: 640px;

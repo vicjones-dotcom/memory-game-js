@@ -14,10 +14,10 @@ button.addEventListener("click", () => {
   let matchedCards = document.querySelectorAll(".matched");
 
   function flipCard() {
-    // If a second card is clicked, lockBoard === false
+    // If a second card is clicked, lockBoard is set to false
     if (lockBoard) return;
     this.classList.add("flip");
-    // When no card is flipped -> hasFlippedCard = true & firstCard is set to clicked
+    // When no card is flipped hasFlippedCard is set to true & firstCard is set to clicked
     if (!hasFlippedCard) {
       hasFlippedCard = true;
       firstCard = this;
@@ -78,12 +78,12 @@ button.addEventListener("click", () => {
     });
   })();
 
-  const winner = () => {
+  function winner() {
     if (document.querySelectorAll(".matched").length === 12) {
-      document.querySelector(".winning-message").classList.remove("hidden");
-      document.querySelector(".winning-message").classList.add("visible");
+      document.getElementById("win-message").style.visibility = "visible";
+      //   document.querySelector("#win-message").classList.add("visible");
     }
-  };
+  }
 
   // Looping through the cards and attaching event listener
   // when clicking on a card the flipCard function will be invoked
