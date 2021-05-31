@@ -69,15 +69,15 @@ function resetBoard() {
 }
 
 // Immediately Invoked Function Expression (IIFE) -> function will execute itself right after its declaration
-// (function shuffle() {
-//   cards.forEach((card) => {
-//     //   Math.floor -> rounds a number downwards to the nearest integer
-//     // Looping through the cards -> generates a random number 0-12 -> assigns it to flex-item:order
-//     // flex-items have their order property set to 0 by default
-//     let ramdomPos = Math.floor(Math.random() * 12);
-//     card.style.order = ramdomPos;
-//   });
-// })();
+(function shuffle() {
+  cards.forEach((card) => {
+    //   Math.floor -> rounds a number downwards to the nearest integer
+    // Looping through the cards -> generates a random number 0-12 -> assigns it to flex-item:order
+    // flex-items have their order property set to 0 by default
+    let ramdomPos = Math.floor(Math.random() * 12);
+    card.style.order = ramdomPos;
+  });
+})();
 
 function winner() {
   if (document.querySelectorAll(".matched").length === 12) {

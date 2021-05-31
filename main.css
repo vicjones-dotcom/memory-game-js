@@ -105,11 +105,11 @@ body {
   height: 25vh;
   width: 80%;
   opacity: 0.8;
-  visibility: hidden;
+  visibility: visible;
   position: absolute;
   margin: 100px 60px;
   z-index: 3;
-  animation: dangle 3s infinite;
+  animation: dangle 10s infinite;
   font-family: Londrina Solid;
   font-size: 30px;
 }
