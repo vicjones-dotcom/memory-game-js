@@ -2,7 +2,12 @@
 .game-instructions {
   &__heading {
     font-family: $primary-font;
+    text-align: center;
+    margin: 20px auto;
+    color: white;
+    font-size: 30px;
   }
+
   &__button {
     border-radius: 10px;
     box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
@@ -20,25 +25,13 @@
     padding: 20px auto;
     font-family: $primary-font;
   }
-  &__winning-message-container {
-    background-color: #407088;
-    border-radius: 10px;
-    padding: 50px 50px;
-    margin-top: 50px;
-    visibility: hidden;
-  }
-  &__win-message {
-    visibility: hidden;
-  }
 }
+
 .memory-game {
-  width: 640px;
-  height: 640px;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  //   perspective -> sets how far in the z plane the object is
-  perspective: 1000px;
+  &__heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
   &__card {
     // width and height are calculated with calc() CSS function
     width: calc(25% - 10px);
@@ -48,6 +41,7 @@
     margin: 5px;
     position: relative;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    // scales the element across the x or y axis/strech or shrink/1 does nothing
     transform: scale(1);
     //   To position the card in the 3D space created for the parent
     transform-style: preserve-3d;
@@ -77,5 +71,58 @@
     background: #407088;
     //   To reveal the image underneath it
     backface-visibility: hidden;
+  }
+  &__winning-message-container {
+    background-color: #407088;
+    border-radius: 10px;
+    padding: 20px 20px;
+    height: 25vh;
+    width: 80%;
+    visibility: hidden;
+    position: absolute;
+    margin: 100px 60px;
+    z-index: 3;
+    animation: dangle 3s 3;
+  }
+  @keyframes dangle {
+    0% {
+      -webkit-transform: rotate(30deg);
+    }
+    10% {
+      -webkit-transform: rotate(-28deg);
+    }
+    20% {
+      -webkit-transform: rotate(26deg);
+    }
+    30% {
+      -webkit-transform: rotate(-24deg);
+    }
+    40% {
+      -webkit-transform: rotate(22deg);
+    }
+    50% {
+      -webkit-transform: rotate(-20deg);
+    }
+    60% {
+      -webkit-transform: rotate(18deg);
+    }
+    70% {
+      -webkit-transform: rotate(-16deg);
+    }
+    80% {
+      -webkit-transform: rotate(12deg);
+    }
+  }
+
+  &__win-message {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &__restart-btn {
+    display: block;
+    margin: 0 auto;
+    background: orange;
+    padding: 10px 10px;
+    border-radius: 10px;
   }
 }

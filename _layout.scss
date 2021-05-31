@@ -1,0 +1,19 @@
+.container {
+  margin: 0 auto;
+}
+.game-instructions {
+  width: 600px;
+  height: 100px;
+  display: flex;
+  margin: 0 auto;
+}
+.memory-game {
+  margin-top: 30px;
+  width: 640px;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  //   perspective -> sets how far in the z plane the object is
+  perspective: 1000px;
+}

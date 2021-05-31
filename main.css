@@ -1,4 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap");
+.container {
+  margin: 0 auto;
+}
+
+.game-instructions {
+  width: 600px;
+  height: 100px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.memory-game {
+  margin-top: 30px;
+  width: 640px;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -12,11 +34,15 @@ a {
 body {
   height: 100vh;
   display: flex;
-  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  background: linear-gradient(109.6deg, black 11.2%, #0b8491 91.1%);
 }
 
 .game-instructions__heading {
-  font-family: Poppins;
+  font-family: Londrina Solid;
+  text-align: center;
+  margin: 20px auto;
+  color: white;
+  font-size: 30px;
 }
 .game-instructions__button {
   border-radius: 10px;
@@ -33,26 +59,12 @@ body {
   border: 1px solid #407088;
   border-radius: 10px;
   padding: 20px auto;
-  font-family: Poppins;
-}
-.game-instructions__winning-message-container {
-  background-color: #407088;
-  border-radius: 10px;
-  padding: 50px 50px;
-  margin-top: 50px;
-  visibility: hidden;
-}
-.game-instructions__win-message {
-  visibility: hidden;
+  font-family: Londrina Solid;
 }
 
-.memory-game {
-  width: 640px;
-  height: 640px;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  perspective: 1000px;
+.memory-game__heading {
+  text-align: center;
+  margin-bottom: 20px;
 }
 .memory-game__card {
   width: calc(25% - 10px);
@@ -85,6 +97,58 @@ body {
   border-radius: 5px;
   background: #407088;
   backface-visibility: hidden;
+}
+.memory-game__winning-message-container {
+  background-color: #407088;
+  border-radius: 10px;
+  padding: 20px 20px;
+  height: 25vh;
+  width: 80%;
+  visibility: hidden;
+  position: absolute;
+  margin: 100px 60px;
+  z-index: 3;
+  animation: dangle 3s 3;
+}
+@keyframes dangle {
+  0% {
+    -webkit-transform: rotate(30deg);
+  }
+  10% {
+    -webkit-transform: rotate(-28deg);
+  }
+  20% {
+    -webkit-transform: rotate(26deg);
+  }
+  30% {
+    -webkit-transform: rotate(-24deg);
+  }
+  40% {
+    -webkit-transform: rotate(22deg);
+  }
+  50% {
+    -webkit-transform: rotate(-20deg);
+  }
+  60% {
+    -webkit-transform: rotate(18deg);
+  }
+  70% {
+    -webkit-transform: rotate(-16deg);
+  }
+  80% {
+    -webkit-transform: rotate(12deg);
+  }
+}
+.memory-game__win-message {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.memory-game__restart-btn {
+  display: block;
+  margin: 0 auto;
+  background: orange;
+  padding: 10px 10px;
+  border-radius: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */
