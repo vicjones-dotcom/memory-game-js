@@ -17,3 +17,4 @@ EXPECTATIONS OF THE GAME:
 FUTURE ADDITIONS:
 1. Timer could be added.
 2. A start button and a restart button.
+3. A pop-up message for losing.
