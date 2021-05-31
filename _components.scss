@@ -51,6 +51,9 @@
   &__card.flip {
     transform: rotateY(180deg);
   }
+  &__card:hover {
+    cursor: pointer;
+  }
   &__front-face {
     width: 100%;
     height: 100%;
@@ -66,7 +69,6 @@
     height: 100%;
     padding: 20px;
     position: absolute;
-    background-image: url(https://unsplash.com/photos/oMpAz-DN-9I);
 
     //   To reveal the image underneath it
     backface-visibility: hidden;
@@ -85,6 +87,10 @@
     animation: dangle 3s infinite;
     font-family: $primary-font;
     font-size: 30px;
+  }
+  &__winning-message-container:hover {
+    cursor: pointer;
+    opacity: 1;
   }
   @keyframes dangle {
     0% {
