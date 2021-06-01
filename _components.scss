@@ -77,7 +77,7 @@
     background-color: #043035;
     color: white;
     padding: 20px 20px;
-    height: 25vh;
+    height: 35vh;
     width: 80%;
     opacity: 0.8;
     visibility: hidden;
@@ -129,8 +129,14 @@
   &__restart-btn {
     display: block;
     margin: 0 auto;
-    background: orange;
+    background: rgb(160, 106, 7);
     padding: 10px 10px;
     border-radius: 10px;
+    font-family: $primary-font;
+    font-size: 20px;
+  }
+  &__restart-btn:hover {
+    cursor: pointer;
+    font-size: 25px;
   }
 }
