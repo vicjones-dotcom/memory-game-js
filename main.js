@@ -1,11 +1,9 @@
-const button = document.querySelector("#start-game-btn");
-
 const restartClick = document.querySelector("#restart-btn");
 
 const cards = document.querySelectorAll("#memory-card");
 // Variables to ensure that when first card is clicked, it will wait until another one is flipped
 let cardsArr = [cards];
-console.log(cardsArr);
+
 let hasFlippedCard = false;
 
 let firstCard, secondCard;
@@ -25,7 +23,7 @@ function flipCard() {
     return;
   }
   secondCard = this;
-  //   hasFlippedCard = false;
+  //   when hasFlippedCard is set to false;
   checkForMatch();
 }
 
@@ -85,6 +83,9 @@ function winner() {
     document.querySelector("#winning-message").style.visibility = "visible";
   }
 }
+function restart() {
+  document.location.href = "";
+}
 
 // Looping through the cards and attaching event listener
 // when clicking on a card the flipCard function will be invoked
@@ -92,7 +93,7 @@ function winner() {
 cards.forEach((card) => card.addEventListener("click", flipCard));
 
 restartClick.addEventListener("click", () => {
-  unflipCards();
   document.querySelector("#winning-message").style.visibility = "hidden";
   document.querySelector("#win-message").style.visibility = "hidden";
+  restart();
 });

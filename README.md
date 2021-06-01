@@ -2,7 +2,7 @@
 
 This game is built with HTML, SASS, CSS, and JavaScript.
 
-RULES OF THE GAME:
+RULEы OF THE GAME:
 Flip the cards to match them with their pair.
 
 EXPECTATIONS OF THE GAME:
@@ -18,7 +18,5 @@ EXPECTATIONS OF THE GAME:
 
 FUTURE ADDITIONS:
 
-1. Improve restart function.
-2. Timer could be added.
-3. A start button and a restart button.
-4. A losing scenario and a pop-up message for that.
+1. Timer could be added.
+2. A losing scenario and a pop-up message for that.
