@@ -19,3 +19,13 @@ body {
     rgb(11, 132, 145) 91.1%
   );
 }
+@media screen and (max-width: 660px) {
+  body {
+    background: #032124;
+  }
+}
+@media screen and (max-width: 480px) {
+  body {
+    background: #032124;
+  }
+}

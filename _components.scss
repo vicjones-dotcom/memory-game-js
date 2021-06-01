@@ -140,3 +140,21 @@
     font-size: 25px;
   }
 }
+@media screen and (max-width: 660px) {
+  .game-instructions {
+    width: 300px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  .memory-game {
+    position: relative;
+  }
+  .memory-game__card {
+    left: 0;
+    right: 0;
+    width: 30%;
+    padding-bottom: 20%;
+    margin: 5% 0%;
+  }
+}

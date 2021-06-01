@@ -2,7 +2,7 @@
 
 This game is built with HTML, SASS, CSS, and JavaScript.
 
-RULEы OF THE GAME:
+RULES OF THE GAME:
 Flip the cards to match them with their pair.
 
 EXPECTATIONS OF THE GAME:
@@ -14,7 +14,7 @@ EXPECTATIONS OF THE GAME:
 5. The cards will be reset after each round.
 6. Cards will be shuffled immediately after their function declaration.
 7. If all cards are matched, a pop-up message will notify the player that they have won.
-8. When clicking on the restart button, cards will be unflip and start the game again.
+8. When clicking on the restart button, cards will be unflipped and start the game again.
 
 FUTURE ADDITIONS:
 

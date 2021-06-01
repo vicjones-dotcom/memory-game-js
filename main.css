@@ -37,6 +37,16 @@ body {
   background: linear-gradient(109.6deg, black 11.2%, #0b8491 91.1%);
 }
 
+@media screen and (max-width: 660px) {
+  body {
+    background: #032124;
+  }
+}
+@media screen and (max-width: 480px) {
+  body {
+    background: #032124;
+  }
+}
 .game-instructions__heading {
   font-family: Londrina Solid;
   text-align: center;
@@ -162,6 +172,27 @@ body {
 .memory-game__restart-btn:hover {
   cursor: pointer;
   font-size: 25px;
+}
+
+@media screen and (max-width: 660px) {
+  .game-instructions {
+    width: 300px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .memory-game {
+    position: relative;
+  }
+
+  .memory-game__card {
+    left: 0;
+    right: 0;
+    width: 30%;
+    padding-bottom: 20%;
+    margin: 5% 0%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
