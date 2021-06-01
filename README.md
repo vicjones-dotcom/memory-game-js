@@ -21,4 +21,4 @@ FUTURE ADDITIONS:
 1. Improve restart function.
 2. Timer could be added.
 3. A start button and a restart button.
-4. A pop-up message for losing.
+4. A losing scenario and a pop-up message for that.
