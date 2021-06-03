@@ -12,9 +12,9 @@ let lockBoard = false;
 
 let matchedCards = document.querySelectorAll(".matched");
 
-if (navigator.userAgent.toLowerCase().indexOf("Chrome") < 0) {
+if (navigator.userAgent.toLowerCase().indexOf("chrome") < 0) {
   alert(
-    "This game is may not be supported on your browser, sorry! Try using Chrome :)"
+    "This game may not be supported on your browser, sorry! Try using Chrome :)"
   );
 }
 
