@@ -12,8 +12,10 @@ let lockBoard = false;
 
 let matchedCards = document.querySelectorAll(".matched");
 
-if (navigator.userAgent.includes("Safari")) {
-  alert("This game is not supported on your browser, sorry!");
+if (navigator.userAgent.toLowerCase().indexOf("Chrome") < 0) {
+  alert(
+    "This game is may not be supported on your browser, sorry! Try using Chrome :)"
+  );
 }
 
 function flipCard() {
